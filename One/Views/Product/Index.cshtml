@@ -1,0 +1,36 @@
+﻿@model IEnumerable<One.Models.Product>
+@{
+    ViewData["Title"] = "Index";
+}
+<a asp-action="AddProduct" >Add</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Lot No</th>
+            <th>Manufacture Date</th>
+            <th>Expire Date</th>
+            <th>Unit</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    @foreach(var item in Model){ 
+        <tbody>
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.LotNo</td>
+                <td>@item.ManufactureDate</td>
+                <td>@item.ExpireDate</td>
+                <td>@item.Unit</td>
+                <td>@item.Price</td>
+                <td>
+                    <a href="Edit" class=" btn btn-outline-dark">Edit</a>
+                    <a href="Delete" class=" btn btn-outline-danger">Delete</a>
+                </td>
+
+            </tr>
+        </tbody>
+    }
+</table>
+

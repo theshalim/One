@@ -1,0 +1,41 @@
+﻿@model  One.Models.Product
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+
+<div class="row">
+    <div class="col-9">
+        <form asp-action="AddProduct" method="post">
+
+            <div class="row">
+                <div class="col-3"><h6>Product Name :</h6></div>
+                <div class="col-6"> <input asp-for="Name" class="form-control" /></div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-3"> <h6>Product Lot :</h6> </div>
+                <div class="col-6"> <input asp-for="LotNo" class="form-control" /> </div>
+            </div><br />
+
+            <div class="row">
+                <div class="col-3"> <h6>Manufacture Date :</h6></div>
+                <div class="col-6"> <input asp-for="ManufactureDate" type="date" class="form-control" /> </div>
+            </div><br />
+            <div class="row">
+                <div class="col-3">  <h6>Expire Date :</h6></div>
+                <div class="col-6"> <input asp-for="ExpireDate" type="date" class="form-control" /> </div>
+            </div><br />
+            <div class="row">
+                <div class="col-3"> <h6>Product Unit :</h6></div>
+                <div class="col-6"> <input asp-for="Unit" class="form-control" /> </div>
+            </div><br />
+            <div class="row">
+                <div class="col-3"> <h6>Product Price :</h6></div>
+                <div class="col-6"><input asp-for="Price" class="form-control" /> </div>
+            </div><br />
+            <button type="submit" class=" btn btn-outline-primary">Save</button>
+            <a href="Index" class=" btn btn-outline-secondary">Back</a>
+        </form>
+    </div>
+</div>
